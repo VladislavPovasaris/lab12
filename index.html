@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<link rel="stylesheet" media="screen" href="styles.css">
+<link rel="stylesheet" media="print" href="print.css">
+<title>Lab work 8 Vladislav Povasaris EIRfu-21</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta charset ="UTF-8">
+<meta name = "author" content = "Vladislav Povasaris">
+<script>
+        <!--
+        function CheckYear(yyyy){
+            if(isNaN(yyyy))
+                return false;
+            else {
+                if(yyyy >= 2022) {
+                return true;
+                }
+                else {
+                  return false;
+                }
+              }
+        }
+        function CheckMonth(mm){
+            if(isNaN(mm))
+                return false;
+            else {
+                if(mm >= 1 && mm <= 12) {
+                return true;
+                }
+                else {
+                  return false;
+                }
+              }
+        }
+        function CheckDay(dd){
+            if(isNaN(dd))
+                return false;
+            else {
+                if(dd >= 1 && dd <= 30) {
+                return true;
+                }
+                else {
+                  return false;
+                }
+              }
+        }
+        function Calculate(yyyy,mm,dd){
+          var now = new Date();
+          if (mm == 2){
+            if (dd > 29){
+              dd = 28;
+            }
+          }
+          var d = new Date(yyyy, mm - 1, dd, 0, 0, 0 , 0); //month starts with 0.
+          var Difference_In_Time = d.getTime() - now.getTime();
+          var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+          return Math.floor(Difference_In_Days);
+        }
+        function clear() {
+        document.getElementById('insert_here').innerHTML = '';
+}
+        function Complete(){
+         if (CheckYear(document.userInfo.yyyy.value) && CheckMonth(document.userInfo.mm.value) && CheckDay(document.userInfo.dd.value)){
+           clear();
+           var days = Calculate(document.userInfo.yyyy.value,document.userInfo.mm.value,document.userInfo.dd.value);
+           var Days_wait = document.userInfo.Name.value + " " + document.userInfo.Surname.value + " has to wait for " + days + " days";
+            var Out="Name: " + document.userInfo.Name.value +
+                "\nSurname: " + document.userInfo.Surname.value +
+                "\nWaiting for: " + document.userInfo.yyyy.value +
+                "/" + document.userInfo.mm.value +
+                "/" + document.userInfo.dd.value +
+                "\n" + "\n" + Days_wait;
+                Out1="<pre>Name: " + document.userInfo.Name.value +
+                    "\nSurname: " + document.userInfo.Surname.value +
+                    "\nWaiting for: " + document.userInfo.yyyy.value +
+                    "/" + document.userInfo.mm.value +
+                    "/" + document.userInfo.dd.value +
+                    "\n" + "\n" + Days_wait +"</pre>";
+                let out = document.createElement('div');
+                out.className = "alert";
+                out.innerHTML = Out1;
+                document.getElementById("insert_here").append(out);
+                var font_size = 20;
+                if (days <= 1000){
+                  font_size = 10;
+                }
+                else if (days<=7000 && days > 1000){
+                  font_size = 16;
+                }
+                var newStyle = document.createElement('style')
+                document.head.append(newStyle)
+                newStyle.innerHTML = "pre {" +
+                "font-size: " + font_size + "px;" + "font-family: " + "Open Sans" + ",sans-serif;" +
+                "}"
+            alert(Out);
+          }
+          else {
+            if (!(CheckYear(document.userInfo.yyyy.value))){
+            alert("Please select year starting from 2022\n");
+          }
+          if (!(CheckMonth(document.userInfo.mm.value))){
+            alert("Please select month in range from 1 to 12\n");
+          }
+          if (!(CheckDay(document.userInfo.dd.value))){
+            alert("Please select day in range from 1 to 30\n");
+          }
+        }
+      }
+        //-->
+    </script>
+</head>
+<body>
+  <div class="Title">
+    <h1>PLACES TO VISIT IN LITHUANIA</h1>
+  </div>
+<div class="list">
+  <ul>
+    <p>Here are recommendations for places to visit in Lithuania. It is possible to explore the country by bus, train, car, plane and even hot air balloon.<p>
+    <text>&nbsp;</text>
+      <li><b>Anykščiai</b> Anykščiai is a town situated at the confluence of two rivers, the Šventoji and Anykšta, in eastern Lithuania. It was first mention in July 1440. The small town is known for its picturesque countryside including 76 lakes and also serves as a ski resort in the winter.</li>
+      <li><b>The Curonian</b> Spit The Curonian Spit is an extraordinary piece of land along the Baltic coast designated as a UNESCO World Heritage Site and a national park. The quaint villages of Smiltynė, Alksnynė, Juodkrantė, Pervalka, Preila and Nida dot the huge strip of sand. The island is forested with linden, elm, birch and pine and hosts a wide range of wildlife, beautiful beaches and a unique group of hardy fishermen. Highlights include a bike ride along the coast, a visit to the striking dunes, and a walk up Witches Hill.</li>
+      <li><b>Druskininkai</b> Druskininkai is the main spa town in Lithuania due to the mineral water springs and curative mud baths. This popular getaway is also where M. K. Čiurlionis, the famous painter and composer, lived and worked.</li>
+      <li><b>Grūtas Park</b> Grūtas Park exhibits an extensive collection of statues and busts of Soviet leaders including Lenin, Stalin and others. The statues, which were erected all over Lithuania during the Soviet occupation, have now been transported to a single location and are displayed throughout the park. The exposition is intended to criticize Soviet ideology and influence.</li>
+      <li><b>The Hill of Crosses</b> The Hill of Crosses (Kryžių kalnas) is located 11 km from Šiauliai in the direction of Riga and is a symbol of people’s faith and freedom of expression. Since 1961, the Soviet Union destroyed the crosses on this hill 4 times but hope springs eternal. Now there are thousands of crosses of different sizes and styles. Pope Paul II held Mass at the Hill of Crosses during his visit to Lithuania. People say that if you leave a cross there, your dreams will come true!</li>
+      <li><b>Kaunas</b> Kaunas is called the “temporary capital” of Lithuania because it was utilized as an alternate capital during times of occupation. It is the second largest city in Lithuania situated at the confluence of two rivers, the Nemunas and the Neris. The city is famous for its basketball team “Žalgiris” and a splendidly restored Old Town. Highlights include a visit to Freedom Avenue, the M.K.Čiurlionis Art Gallery, Vytautas Church built in the 14th century, Liberty Square, the “War Museum” and the 11th century Kaunas Castle.</li>
+      <li><b>Kernavė</b> Kernavė was the first Lithuanian capital in 1279. The Kernavė Archaeological Site is about 35 km northwest of Vilnius and gives testimony to 10 millennia of human settlements in this region. Situated in the valley of the River Neris, this unique archaeological area includes the town of Kernavė, forts, unfortified settlements, burial sites and other remnants from the late Paleolithic period to the Middle Ages.</li>
+      <li><b>Klaipėda</b> Founded in 1252, Klaipėda is the third-largest city in Lithuania, situated on the coast of the Baltic Sea. As a key port city in the European Union, it is a window to the world of international trade for Lithuania. The city, once known as Memel, still has a German feel in places and the Old Town features cobblestone streets and antique lampposts on nearly every street corner. The main draw for tourists is the city's location at the mouth of the Danė River with ferry access to the Curonian Spit.</li>
+      <li><b>Palanga</b> Palanga is one of the most developed resort cities in Lithuania. Although it is a year-round travel destination, it is most popular as a summer resort. Palanga is best known for its beaches, pier, song festivals, symphony concerts and beauty competitions.</li>
+      <li><b>Rumšiškės</b> Rumšiškės is 15 kilometers from Kaunas. It is one of the largest open air museums in Europe which presents a rich mosaic of ancient Lithuanian villages, regions (Aukštaitija, Dzūkija, Suvalkija, Žemaitija) and traditions all in one place. Personal residences, grain sheds, barns, and other farmsteads have been moved from various ethnographic regions and set against the breathtaking backdrop of the Kaunas Sea. There are many activities to enjoy including a horseback riding, riding in a carriage or observing master craftsmen at work. Folk concerts and holiday festivals are held at the museum grounds throughout the year.</li>
+      <li><b>Trakai</b> The quaint, lakeside town of Trakai is about an hour from Vilnius. Trakai is a former capital of Lithuania famous for the island castle built in 14th Century. The castle is a popular tourist destination and the museum has exhibits on Lithuanian Grand Dukes and historic findings. Other highlights of Trakai include boating on the lake, visiting the Karaime Museum and sampling kibinė, a meat pastry characteristic of this region.</li>
+    </ul>
+  </div>
+<div class ="pics">
+  <img src="https://agro-msk.com/wp-content/uploads/2019/04/main.jpg" alt="https://agro-msk.com/wp-content/uploads/2019/04/main.jpg">
+  <img src="https://get.wallhere.com/photo/Trakai-Island-Castle-Trakai-castle-night-landscape-1948833.jpg" alt="https://get.wallhere.com/photo/Trakai-Island-Castle-Trakai-castle-night-landscape-1948833.jpg">
+</div>
+<div class="player">
+  <audio controls>
+    <source src="https://www.muzikusajunga.lt/general/uploadMultiple/audioPlay/key/6778e0d298243a2cbd85052170188237" alt="https://www.muzikusajunga.lt/general/uploadMultiple/audioPlay/key/6778e0d298243a2cbd85052170188237">
+    </audio>
+</div>
+<iframe width="940" height="528" src="https://www.youtube.com/embed/vqFNUwU3dWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><table>
+  <tr>
+    <th>City</th>
+    <th>Population</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Vilnius</td>
+    <td>544 386</td>
+    <td>Lithuania</td>
+  </tr>
+  <tr>
+    <td>Kaunas</td>
+    <td>295 269</td>
+    <td>Lithuania</td>
+  </tr>
+  <tr>
+    <td>Riga</td>
+    <td>632 614</td>
+    <td>Latvia</td>
+  </tr>
+</table>
+<div class = 'tourism_info'>
+<h1>TOURISM</h1>
+  <text>&nbsp;</text>
+  <p>Local tourist information centers can provide maps and tourism information.</p>
+  <text>&nbsp;</text>
+  <div class="contacts">
+    <p>Tourist Information Centers</p>
+    <p>Geležinkelio g. 16, Vilnius</p>
+    <p>Tel. +370 5 269 2091</p>
+    <text>&nbsp;</text>
+    <p>Vilnius g. 22, Vilnius</p>
+    <p>Tel. +370 5 262 9660</p>
+    <text>&nbsp;</text>
+    <p>Didžioji g. 31, Vilnius</p>
+    <p>Tel. +370 5 262 6470</p>
+  </div>
+</div>
+<div class = "lab12">
+<form NAME="userInfo">
+  <text>Name:</text>
+    <INPUT NAME="Name" SIZE=20>
+      <p></p>
+  <text>Surname:
+    <INPUT NAME="Surname" SIZE=20>
+          <p></p>
+  <text>Waiting for: yyyy:
+    <INPUT NAME="yyyy" SIZE=4>
+      mm
+        <INPUT NAME="mm" SIZE=4>
+          dd
+          <INPUT NAME="dd" SIZE=4></text>
+            <p></p>
+<INPUT TYPE="button" VALUE="Calculate" onClick="Complete();">
+  </form>
+<div id = "insert_here">
+</div>
+</div>
+<div class = 'equation1'
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup> <!--used to attach both a subscript and a superscript, together, to an expression-->
+    <mo>&#x222D;<!-- ∭ --></mo> <!--element represents an operator in a broad sense-->
+    <mrow class="MJX-TeXAtom-ORD"> <!--used to group sub-expressions-->
+      <mi>v</mi> <!--indicates that the content should be rendered as an identifier such as function names, variables or symbolic constants-->
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+    </mrow>
+  </msubsup>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="normal">&#x2207;<!-- ∇ --></mi>
+  <mo>&#x22C5;<!-- ⋅ --></mo>
+  <mi>F</mi>
+  <mo stretchy="false">)</mo>
+  <mi>d</mi>
+  <mi>V</mi>
+  <mo>=</mo>
+  <msubsup>
+      <mo>&#x222F;<!-- ∯ --></mo> <!--unfortunately, this character does not work with mo tag-->
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>s</mi>
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+    </mrow>
+  </msubsup>
+  <mi>F</mi>
+  <mo>&#x22C5;<!-- ⋅ --></mo>
+  <mi>d</mi>
+  <mi>S</mi>
+</math>
+</div>
+<div class = 'equation2'
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup> <!--used to attach both a subscript and a superscript, together, to an expression-->
+    <mo>&#x222D;<!-- ∭ --></mo> <!--element represents an operator in a broad sense-->
+    <mrow class="MJX-TeXAtom-ORD"> <!--used to group sub-expressions-->
+      <mi>v</mi> <!--indicates that the content should be rendered as an identifier such as function names, variables or symbolic constants-->
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+    </mrow>
+  </msubsup>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="normal">&#x2207;<!-- ∇ --></mi>
+  <mo>&#x22C5;<!-- ⋅ --></mo>
+  <mi>F</mi>
+  <mo stretchy="false">)</mo>
+  <mi>d</mi>
+  <mi>V</mi>
+  <mo>=</mo>
+  <mrow class="MJX-TeXAtom-ORD">
+    <mo>&#x2282;<!-- ⊂ --></mo>
+    <mspace width="negativethinmathspace" />
+    <mo>&#x2283;<!-- ⊃ --></mo>
+  </mrow>
+  <msub>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mpadded width="0" lspace="-1width">
+        <mo>&#x222C;<!-- ∬ --></mo>
+      </mpadded>
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi mathvariant="normal">s</mi>
+    </mrow>
+  </msub>
+  <mi>F</mi>
+  <mo>&#x22C5;<!-- ⋅ --></mo>
+  <mi>d</mi>
+  <mi>S</mi>
+</math>
+<div class="list2">
+  <ul>
+      <li class="li2">Lorem ipsum dolor</li>
+      <li class="li2">sit amet, consectetur</li>
+      <li class="li2"> adipisicing elit, sed do eiusmod tempor incididunt</li>
+    </ul>
+  </div>
+</div>
+<svg id = "symbol" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000000;
+        stroke-width: 1px;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="Эллипс_1" data-name="Эллипс 1" class="cls-1" cx="6.5" cy="6.5" r="6.094"/>
+  <path id="Фигура_1" data-name="Фигура 1" class="cls-2" d="M6.118,0H6.882V13H6.118V0ZM0,6.882V6.118H13V6.882H0Z"/>
+</svg>
+</body>
+<footer>
+  <div class ="footer_container">
+      <ul class="footer_links" style="">
+        <div class = "col1">
+            <li class="footer_list"><a href="https://github.com/VladislavPovasaris?tab=repositories"><b>Website</b></a></li>
+        </div>
+        <div class = "col2">
+            <li class="footer_list"><a href="mailto:vladislav.povasaris@gmail.com"><b>E-mail</b></a></li>
+        </div>
+        <div class = "col3">
+            <li class="footer_list"><a href="javascript:window.print()"><b>Print</b></a></li>
+        </div>
+      </ul>
+  </div>
+</footer>
+</html>

@@ -1,0 +1,205 @@
+@media screen {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+html
+{
+  -webkit-text-size-adjust: 100%;
+}
+body
+{
+  font-family: "Open Sans",sans-serif;
+  max-width: 940px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
+}
+.list
+{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: 0;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  font-size: 14px;
+}
+ul
+{
+  margin: auto;
+  width: auto;
+  height: auto;
+  padding-left: 0;
+
+}
+.pics
+{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 940px;
+  justify-content: center;
+}
+img
+{
+  margin-left: auto;
+  margin-right: auto;
+  height: 310px;
+  width: 467px;
+  justify-content: center;
+}
+.player
+{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+h1
+{
+  color: #0b4dc7;
+  font-family: "Open Sans",sans-serif;
+  line-height: 150%;
+}
+a
+{
+  text-decoration: none;
+  color: #0b4dc7;
+}
+a:hover
+{
+  text-decoration: underline;
+}
+a:visited
+{
+  color: #0b4dc7;
+}
+a:active
+{
+  color: #0bc7c5;
+}
+.contacts
+{
+  line-height: 1.5;
+}
+li
+{
+  list-style-type: none;
+  color: #778898;
+  line-height: 160%;
+  padding-bottom: 20px;
+}
+table
+{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-collapse: collapse;
+  border-color: black;
+  border: 1px solid black;
+}
+td,th
+{
+  text-align: center;
+  padding: 3px;
+  border: 1px solid black;
+  padding: 10px;
+}
+footer
+{
+  margin-top: 20px;
+  position: absolute;
+  width: 100%;
+  left:0;
+  height: 100px;
+  background-color: #ebf6ff;
+}
+.footer_container
+{
+  max-width: 940px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer_links
+{
+  height: 100px;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  justify-content:space-between;
+}
+.col1
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  height: auto;
+}
+.col2
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  height: auto;
+}
+.col3
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  height: auto;
+}
+@keyframes color_change {
+  0%,25% {color:blue}
+  25%,50% {color:green}
+  50%,75% {color:white}
+  50%,100% {color:black}
+}
+@keyframes color {
+  0%,25% {fill:blue}
+  25%,50% {fill:green}
+  50%,75% {fill:white}
+  50%,100% {fill:black}
+}
+@keyframes color1 {
+0%,25% {stroke:blue}
+25%,50% {stroke:green}
+50%,75% {stroke:white}
+50%,100% {stroke:black}
+}
+/* Apply it to an element */
+circle.cls-1 {
+  animation: color1 5s linear infinite;
+}
+path.cls-2 {
+  animation: color 5s linear infinite;
+}
+p
+{
+  color: #778898;
+  margin: 0px;
+  font-size: 15px;
+}
+li.footer_list
+{
+  padding: 0;
+}
+.Title
+{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+li.li2
+{
+  list-style-type: none;
+  margin-left: 13px;
+  padding-left: 2px;
+}
+li.li2::marker
+{
+  content: url(https://svgshare.com/i/oaQ.svg);
+  animation: color_change 5s linear infinite;
+}
+div.lab12
+{
+  margin-top: 20px;
+}
+}

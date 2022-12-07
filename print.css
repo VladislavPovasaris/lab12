@@ -1,0 +1,142 @@
+@media print {
+
+html
+{
+  font-family: 'serif';
+}
+body
+{
+  font-family:'serif', serif;
+  text-align: right;
+  font-size: 12px;
+  line-height: 1;
+}
+.list
+{
+  margin-bottom: 0;
+}
+ul
+{
+  padding-left: 0;
+}
+.pics
+{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 940px;
+  float: right;
+}
+img
+{
+  margin-left: auto;
+  margin-right: auto;
+  height: 313px;
+  width: 471px;
+  float: right;
+}
+.player
+{
+  display: none;
+}
+h1
+{
+  color: #0b4dc7;
+  font-size: 16px;
+}
+a
+{
+  display: none;
+}
+a:hover
+{
+  display: none;
+}
+a:visited
+{
+  display: none;
+}
+a:active
+{
+  display: none;
+}
+.tourism_info
+{
+  padding-top: 1000px;
+}
+.contacts
+{
+  line-height: 1.15;
+}
+li
+{
+  list-style-type: none;
+  color: #778898;
+  line-height: 160%;
+  padding-bottom: 10px;
+}
+table
+{
+  margin-bottom: 40px;
+  border-collapse: collapse;
+  border-color: black;
+  border: 1px solid black;
+  float:right;
+}
+td,th
+{
+  text-align: center;
+  padding: 3px;
+  border: 1px solid black;
+  padding: 10px;
+}
+footer
+{
+  display: none;
+}
+.footer_container
+{
+  display: none;
+}
+.footer_links
+{
+  display: none;
+}
+.col1
+{
+  display: none;
+}
+.col2
+{
+  display: none;
+}
+.col3
+{
+  display: none;
+}
+
+p
+{
+
+}
+li.footer_list
+{
+  display: none;
+}
+iframe
+{
+  display: none;
+}
+text
+{
+  display: none;
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+.Title
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+}
